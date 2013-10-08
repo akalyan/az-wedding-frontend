@@ -15,5 +15,7 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
+    - bower-install
+
     # A step to run grunt with the default Gruntfile.js
     - grunt
