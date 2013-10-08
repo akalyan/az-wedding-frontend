@@ -1,12 +1,11 @@
 box: wercker/nodejs
+
 # Build definition
 build:
   # The steps that will be executed on build
   steps:
     # A step that executes `npm install` command
     - npm-install
-    # A step that executes `npm test` command
-    - npm-test
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -15,3 +14,6 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+
+    # A step to run grunt with the default Gruntfile.js
+    - grunt
