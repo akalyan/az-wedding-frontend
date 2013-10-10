@@ -11,7 +11,8 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    arch: 'archive'
   };
 
   try {
@@ -236,6 +237,18 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+    compress: {
+      options: {
+        archive: 'archive.tar',
+        mode: 'tar',
+        pretty: 'true'
+      },
+      arch: {
+        files: [
+          { src: ['<%= yeoman.dist %>/**/*'], dest: '<%= yeoman.arch %>/' }
+        ]
+      }
     }
   });
 
@@ -274,6 +287,8 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
+
+  grunt.registerTask('archive', ['compress:arch']);
 
   grunt.registerTask('default', ['build']);
 };
