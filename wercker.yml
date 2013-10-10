@@ -29,7 +29,7 @@ deploy:
         name: mkdir and move archive
         code: |
           mkdir arch
-          mv archive.tar arch
+          mv archive.zip arch
 
     - s3sync:
         key_id: $AWS_KEY

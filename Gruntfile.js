@@ -240,8 +240,8 @@ module.exports = function (grunt) {
     },
     compress: {
       options: {
-        archive: 'archive.tar',
-        mode: 'tar',
+        archive: 'archive.zip',
+        mode: 'zip',
         pretty: 'true'
       },
       arch: {
