@@ -22,7 +22,8 @@ build:
 
 deploy:
   steps:
-    - grunt archive
+    - grunt:
+        tasks: archive
 
     - script:
         name: mkdir and move archive
