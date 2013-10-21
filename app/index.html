@@ -11,11 +11,14 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>    
   </head>
-  <body ng-app="azWeddingFrontendApp">
+  <body>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -26,24 +29,182 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view></div>
+    <!-- div class="container" ng-view></div -->
 
+    <!-- START PAGE -->
+    <div id="page">
+      
+      <!-- START HEADER -->
+      <section id="header" class="bg1">
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="intro" class="text-container headline">
+              <h1>Zyanya Weds Atish</h1>
+              <h2>September 1, 2014</h2>
+              <div id="explore"><a class="scroll" href="#aboutus"><i class="icon-angle-down icon-4x"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END HEADER -->
+
+      <!-- START TOP-BAR -->
+      <div id="top-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div id="logo-lettering"><img /></div>
+              <div id="menu-mobile" class="hidden-md hidden-lg">
+                <i class="icon-reorder icon-2x"></i>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <nav id="top-navigation">
+                <ul class="list-inline">
+                  <li><a href="#aboutus">about us</a></li>
+                  <li><a href="#pictures">pictures</a></li>
+                  <li><a href="#events">events</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END TOP-BAR -->    
+
+      <!-- START ABOUT US SECTION -->
+      <section id="aboutus">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
+            <h1>About Us</h1>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="container row">
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
+            
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <div class="member-photo">
+                <div class="image">
+                  <img src="images/zyanya.jpg" alt="Zyanya">
+                </div>
+                <div class="image-hover">
+                  <img src="images/zyanya.jpg" alt="Zyanya">
+                </div>
+              </div>
+	    </div>
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <h5>Zyanya Breuer</h5>
+              <p>"The Bride"</p>
+            </div>
+
+	  </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
+
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <div class="member-photo">
+                <div class="image">
+                  <img src="images/atish.jpg" alt="Atish">
+                </div>
+                <div class="image-hover">
+                  <img src="images/atish.jpg" alt="Atish">
+                </div>
+              </div>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <h5>Atish Kalyan</h5>
+              <p>"The Groom"</p>
+            </div>
+
+	  </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
+
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <div class="member-photo">
+                <div class="image">
+                  <img src="images/us.jpg" alt="Us">
+                </div>
+                <div class="image-hover">
+                  <img src="images/us.jpg" alt="Us">
+                </div>
+              </div>
+	    </div>
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <h5>Our Story</h5>
+              <p>"A tale of salsa, HTML, and broken rules"</p>
+	      <p></p>
+            </div>
+
+	  </div>
+
+	</div>
+
+      </section>
+      <!-- END ABOUT US  SECTION -->
+
+      <!-- START PICTURES SECTION -->
+      <section id="pictures">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
+            <h1>Pictures</h1>
+            <p>A few of our favorite pictures from the 5+ years we've been together...</p>
+          </div>
+        </div>
+        <div class="pictures">
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="swiper" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/faves/fave2.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave3.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave5.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave6.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave7.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave8.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave9.jpg" alt="" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END PICTURES SECTION -->
+
+      
+
+      <!-- START EVENTS SECTION -->
+      <section id="events">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
+            <h1>Events</h1>
+            <p>Planning for the wedding events is under way.  Stay tuned for updates. </p>
+          </div>
+        </div>
+      </section>
+      <!-- END EVENTS SECTION -->
+
+    <div>
+
+
+    <!-- build:js scripts/scripts.js -->
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jQuery-Parallax/scripts/jquery.parallax-1.1.3.js"></script>
+    <script src="components/jQuery-Parallax/scripts/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="components/jQuery-Parallax/scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="components/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="components/modernizr/modernizr.js"></script>
+    <script src="components/swiper/dist/idangerous.swiper-2.2.min.js"></script>
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/angular-cookies/angular-cookies.js"></script>
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
 
-    <!-- build:js scripts/scripts.js -->
+    <script src="scripts/scripts.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
   </body>
 </html>

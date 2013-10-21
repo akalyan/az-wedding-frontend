@@ -6,3 +6,5 @@ dist
 app/components/
 archive.tar
 .DS_Store
+.picasa*
+npm-debug.log
