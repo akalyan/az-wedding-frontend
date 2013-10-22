@@ -13,17 +13,17 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
-    # - script:
-    #     name: install bower globally
-    #     code: |
-    #       echo "npm install bower -g"
+    - script:
+        name: install bower globally
+        code: |
+          npm install bower -g
 
-    # - script:
-    #     name: run bower install with verbose mode
-    #     code: |
-    #       echo "bower install --verbose"
+    - script:
+        name: run bower install with verbose mode
+        code: |
+          bower install --verbose
 
-    - plasticine/bower-install@0.0.4
+    # - plasticine/bower-install@0.0.4
 
     # A step to run grunt with the default Gruntfile.js
     - grunt
