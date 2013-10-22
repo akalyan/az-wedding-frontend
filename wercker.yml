@@ -12,18 +12,14 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+          echo "bower version $(./node_modules/bower/bin/bower -v) running"
 
-    # - script:
-    #     name: check bower installation
-    #     code: |
-    #       ./node_modules/bower/bin/bower --version
+    - script:
+        name: run bower install with verbose mode
+        code: |
+          ./node_modules/bower/bin/bower install --verbose
 
-    # - script:
-    #     name: run bower install with verbose mode
-    #     code: |
-    #       ./node_modules/bower/bin/bower install --verbose
-
-    - plasticine/bower-install@0.0.4
+    # - plasticine/bower-install@0.0.4
 
     # A step to run grunt with the default Gruntfile.js
     - grunt
