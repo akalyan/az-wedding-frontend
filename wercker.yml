@@ -21,7 +21,7 @@ build:
     - script:
         name: run bower install with verbose mode
         code: |
-          bower install --verbose
+          ./node_modules/bower/bin/bower install --verbose
 
     # - plasticine/bower-install@0.0.4
 
