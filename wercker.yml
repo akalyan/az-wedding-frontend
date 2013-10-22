@@ -7,15 +7,24 @@ build:
     # A step that executes `npm install` command
     - npm-install
 
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
     - script:
         name: echo nodejs information
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
-    - plasticine/bower-install@0.0.4
+
+    - script:
+        name: install bower globally
+        code: |
+          echo "npm install bower -g"
+
+    - script:
+        name: run bower install with verbose mode
+        code: |
+          echo "bower install --verbose"
+
+    # - plasticine/bower-install@0.0.4
 
     # A step to run grunt with the default Gruntfile.js
     - grunt
