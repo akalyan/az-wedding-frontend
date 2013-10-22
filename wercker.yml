@@ -16,7 +16,7 @@ build:
     - script:
         name: check bower installation
         code: |
-          bower --version
+          ./node_modules/bower/bin/bower --version
 
     - script:
         name: run bower install with verbose mode
