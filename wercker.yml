@@ -14,9 +14,9 @@ build:
           echo "npm version $(npm -v) running"
 
     - script:
-        name: install bower globally
+        name: check bower installation
         code: |
-          npm install bower -g
+          bower --version
 
     - script:
         name: run bower install with verbose mode
