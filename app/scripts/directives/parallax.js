@@ -3,7 +3,7 @@
 angular.module('azWeddingFrontendApp')
   .directive('parallax', function (DeviceDetector) {
     return {
-      template: "<div ng-transclude></div>",
+      template: '<div ng-transclude></div>',
       restrict: 'A',
       transclude: true,
       scope: { },

@@ -8,10 +8,10 @@ angular.module('azWeddingFrontendApp')
       send: function (tsd) {
         $http
           .post('/cube/1.0/event/put', JSON.stringify([tsd]))
-          .success(function(data, status, headers, config) {
+          .success(function() {
             $log.log('Successfully sent cube data');
           })
-          .error(function(data, status, headers, config) {
+          .error(function(data, status) {
             $log.log('Failed cube request');
             $log.log(data);
             $log.log(status);

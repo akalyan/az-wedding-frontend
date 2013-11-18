@@ -1,4 +1,4 @@
-/*global jQuery:false */
+/*global jQuery:false, Swiper:false */
 /*jshint trailing:false */
 
 'use strict';
@@ -144,13 +144,13 @@ jQuery(document).ready(function() {
   });
 
   $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
+    e.preventDefault();
+    mySwiper.swipePrev();
+  });
   $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
+    e.preventDefault();
+    mySwiper.swipeNext();
+  });
   
   /* On Load swiper height should adjust to img size */
   jQuery('.swiper-slide img').load(function() {
