@@ -15,8 +15,9 @@ build:
           echo "bower version $(./node_modules/bower/bin/bower -v) running"
 
     - script:
-        name: run bower install with verbose mode
+        name: run bower install with verbose mode, clean first
         code: |
+          ./node_modules/bower/bin/bower cache clean
           ./node_modules/bower/bin/bower install --verbose
 
     # - plasticine/bower-install@0.0.4
