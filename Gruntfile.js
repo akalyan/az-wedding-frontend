@@ -179,6 +179,7 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
+          /*
           removeCommentsFromCDATA: false,
           // https://github.com/yeoman/grunt-usemin/issues/44
           //collapseWhitespace: true,
@@ -188,6 +189,7 @@ module.exports = function (grunt) {
           useShortDoctype: true,
           removeEmptyAttributes: true,
           removeOptionalTags: true
+          */
         },
         files: [{
           expand: true,
