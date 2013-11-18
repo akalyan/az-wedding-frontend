@@ -8,3 +8,4 @@ archive.tar
 .DS_Store
 .picasa*
 npm-debug.log
+.idea/

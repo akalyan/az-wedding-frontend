@@ -14,19 +14,19 @@ function textCenter() {
 
   jQuery('.text-container').css({
     left: (jQuery(window).width() - jQuery('.text-container').outerWidth())/2,
-    top: (jQuery(window).height() - jQuery('.text-container').outerHeight())/2
+    top: jQuery(window).height() - jQuery(window).height()/4 - jQuery('.text-container').outerHeight()/2
   });
 }
 textCenter();
 
 jQuery(document).ready(function() {
 
-  jQuery('h1').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
-    jQuery('h2').animate({opacity: '1', 'padding-top': '5px'}, 500,function() {
+  jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
+    jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
       if(jQuery(window).width()<767){
-        jQuery('#explore').animate({opacity: '1', 'margin-top': '2em'}, 1000);
+        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000);
       } else {
-        jQuery('#explore').animate({opacity: '1', 'margin-top': '4em'}, 1000);
+        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000);
       }
     });
   });
@@ -66,7 +66,7 @@ jQuery(document).ready(function() {
   
   /* Responsive Menu Click */
   jQuery('#menu-mobile').click(function(){
-    if ( jQuery('#top-navigation uld').is(':visible') ) {
+    if ( jQuery('#top-navigation ul').is(':visible') ) {
       jQuery('#top-navigation ul').slideUp(500);
       jQuery('#menu-mobile').removeClass('active');
     } else { 
@@ -102,11 +102,11 @@ jQuery(document).ready(function() {
     jQuery(this).addClass('active');
   
     jQuery('html, body').stop().animate({
-      scrollTop: jQuery(anchor.attr('href')).offset().top-50
+      scrollTop: jQuery(anchor.attr('href')).offset().top-44
     }, 1500,'easeInOutExpo');
     
     /* If Mobile hide menu on select */
-    if(jQuery(window).width()<=767){    
+    if(jQuery('#menu-mobile').hasClass('active')) {
       jQuery('#top-navigation ul').slideUp(500);
       jQuery('#menu-mobile').removeClass('active');
     }
@@ -122,59 +122,35 @@ jQuery(document).ready(function() {
     }, 1500,'easeInOutExpo');
     
     /* If Mobile hide menu on select */
-    if(jQuery(window).width()<=767){    
+    if(jQuery('#menu-mobile').hasClass('active')) {
       jQuery('#top-navigation ul').slideUp(500);
       jQuery('#menu-mobile').removeClass('active');
     }
     
     event.preventDefault();
   });
-  
 
-  /*-----------------------------------------------------------------------------------*/
-  /* Detect iPhone, iPod, iPad and remove or ativate parallax
-  /*-----------------------------------------------------------------------------------*/
-
-  var isMobile = {
-    Android: function() {
-      return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-      return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-      return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-      return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-  };
-  
-  function parallaxInit() {
-    var detectMobile = isMobile.any();
-    if (detectMobile === null) {
-      jQuery('.bg1').parallax('50%', 0.5);
-    }
-  }
-
-  parallaxInit();
 
   /*-----------------------------------------------------------------------------------*/
   /*      about us
   /*-----------------------------------------------------------------------------------*/
   
   /* Initialize Slider */ 
-  jQuery('#swiper').swiper({
+  var mySwiper = new Swiper('#swiper', {
     loop:true,
-    grabCursor: true,
-    autoPlay: 4000
+    autoPlay: 4000,
+    paginationClickable: true,
+    pagination: '.pagination'
   });
+
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
   
   /* On Load swiper height should adjust to img size */
   jQuery('.swiper-slide img').load(function() {
@@ -185,7 +161,7 @@ jQuery(document).ready(function() {
   /* On Resize swiper height should adjust to img size */
   jQuery(window).resize(function() {
     jQuery('#swiper').height(jQuery('.swiper-slide img').height());
-    jQuery('.swiper-wrapper').height(jQuery('.swiper-slide img').height());
+    jQuery('.swiper-wrapper').height(jQuery('.swiper-slide').height());
   });
         
 });

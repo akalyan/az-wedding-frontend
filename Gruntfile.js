@@ -1,5 +1,7 @@
 'use strict';
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
@@ -46,13 +48,23 @@ module.exports = function (grunt) {
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost'
       },
+      server: {
+        proxies: [
+          {
+            context: '/cube',
+            host: 'cube.atishkalyan.com',
+            changeOrigin: true
+          }
+        ]
+      },
       livereload: {
         options: {
           middleware: function (connect) {
             return [
               lrSnippet,
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, yeomanConfig.app)
+              mountFolder(connect, yeomanConfig.app),
+              proxySnippet
             ];
           }
         }
@@ -258,6 +270,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
+    'configureProxies:server',
     'livereload-start',
     'connect:livereload',
     'open',

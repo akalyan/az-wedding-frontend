@@ -28,19 +28,20 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <!-- div class="container" ng-view></div -->
-
     <!-- START PAGE -->
-    <div id="page">
-      
+    <div id="page" ng-app="azWeddingFrontendApp">
+
+      <!-- Add your site or application content here -->
+      <div ng-view></div>
+
       <!-- START HEADER -->
-      <section id="header" class="bg1">
+      <section parallax id="header" class="bg1">
         <div class="row">
           <div class="col-xs-12">
-            <div id="intro" class="text-container headline">
-              <h1>Zyanya Weds Atish</h1>
-              <h2>September 1, 2014</h2>
+            <div id="intro" class="text-container">
+              <img src="images/zyanya_cover.png" id="zyanya_intro" />
+              <img src="images/atish_cover.png" id="atish_intro" />
+              <p class="lead">September 1, 2014</p>
               <div id="explore"><a class="scroll" href="#aboutus"><i class="icon-angle-down icon-4x"></i></a></div>
             </div>
           </div>
@@ -54,7 +55,7 @@
           <div class="row">
             <div class="col-md-4">
               <div id="logo-lettering"><img /></div>
-              <div id="menu-mobile" class="hidden-md hidden-lg">
+              <div id="menu-mobile" class="hidden-lg hidden-md">
                 <i class="icon-reorder icon-2x"></i>
               </div>
             </div>
@@ -75,16 +76,12 @@
       <!-- START ABOUT US SECTION -->
       <section id="aboutus">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
-            <h1>About Us</h1>
-            <p></p>
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 intro">
+            <img src="images/about_us_section_title.png" class="title" />
           </div>
         </div>
-
         <div class="container row">
-
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
-            
             <div class="col-xs-12 col-sm-6 col-lg-12 member">
               <div class="member-photo">
                 <div class="image">
@@ -94,15 +91,20 @@
                   <img src="images/zyanya.jpg" alt="Zyanya">
                 </div>
               </div>
-	    </div>
-            <div class="col-xs-12 col-sm-6 col-lg-12 member">
-              <h5>Zyanya Breuer</h5>
-              <p>"The Bride"</p>
             </div>
-
-	  </div>
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <img src="images/zyanya_title.png" />
+              <p class="paragraph">Zyanya in Atish's words:
+                <blockquote>
+                  <p>Zyanya is a contradiction - intelligent, yet silly; graceful, yet clumsy; a muggle with
+                  magical powers.  She masters everything she becomes passionate about - including dancing, cooking
+                  and baking, chocolate tasting and making, globe trekking, and pet training.  She's beautiful inside
+                  and out, a citizen of the world, and, best of all, she's a great friend to so many, including me.</p>
+            </blockquote>
+              </p>
+            </div>
+          </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
-
             <div class="col-xs-12 col-sm-6 col-lg-12 member">
               <div class="member-photo">
                 <div class="image">
@@ -112,15 +114,21 @@
                   <img src="images/atish.jpg" alt="Atish">
                 </div>
               </div>
-	    </div>
-	    <div class="col-xs-12 col-sm-6 col-lg-12 member">
-              <h5>Atish Kalyan</h5>
-              <p>"The Groom"</p>
             </div>
-
-	  </div>
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <img src="images/atish_title.png" />
+              <p class="paragraph">Atish in Zyanya's words:
+                <blockquote>
+                  <p>From SA to GA to SEA, Atish is one hard-working, adventurous, soccer-loving, tech-nerd
+                  extraordinaire.  He excels at random projects, playing sous-chef, correcting my grammar,
+                  making me laugh, supporting his friends & family, and embracing the little things in life.
+                  Atish is often described by my family as “what a
+                  <a href="http://en.wikipedia.org/wiki/Mensch" target="_blank">mensch</a>!”</p>
+                </blockquote>
+              </p>
+            </div>
+          </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 row">
-
             <div class="col-xs-12 col-sm-6 col-lg-12 member">
               <div class="member-photo">
                 <div class="image">
@@ -130,25 +138,24 @@
                   <img src="images/us.jpg" alt="Us">
                 </div>
               </div>
-	    </div>
-            <div class="col-xs-12 col-sm-6 col-lg-12 member">
-              <h5>Our Story</h5>
-              <p>"A tale of salsa, HTML, and broken rules"</p>
-	      <p></p>
             </div>
-
-	  </div>
-
-	</div>
-
+            <div class="col-xs-12 col-sm-6 col-lg-12 member">
+              <img src="images/our_story_title.png" />
+              <p class="paragraph">A tale of salsa, HTML, and broken rules
+                <blockquote>Coming soon!
+                </blockquote>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- END ABOUT US  SECTION -->
 
       <!-- START PICTURES SECTION -->
       <section id="pictures">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
-            <h1>Pictures</h1>
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 intro">
+            <img src="images/pictures_section_title.png" class="title" />
             <p>A few of our favorite pictures from the 5+ years we've been together...</p>
           </div>
         </div>
@@ -156,15 +163,17 @@
           <div class="row">
             <div class="col-xs-12">
               <div id="swiper" class="swiper-container">
+                <a class="arrow-left" href="#"></a>
+                <a class="arrow-right" href="#"></a>
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="images/faves/fave2.jpg" alt="" ></div>
-                  <div class="swiper-slide"><img src="images/faves/fave3.jpg" alt="" ></div>
                   <div class="swiper-slide"><img src="images/faves/fave5.jpg" alt="" ></div>
                   <div class="swiper-slide"><img src="images/faves/fave6.jpg" alt="" ></div>
                   <div class="swiper-slide"><img src="images/faves/fave7.jpg" alt="" ></div>
                   <div class="swiper-slide"><img src="images/faves/fave8.jpg" alt="" ></div>
                   <div class="swiper-slide"><img src="images/faves/fave9.jpg" alt="" ></div>
+                  <div class="swiper-slide"><img src="images/faves/fave3.jpg" alt="" ></div>
                 </div>
+                <div class="pagination"></div>
               </div>
             </div>
           </div>
@@ -172,21 +181,18 @@
       </section>
       <!-- END PICTURES SECTION -->
 
-      
-
       <!-- START EVENTS SECTION -->
       <section id="events">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 intro">
-            <h1>Events</h1>
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 intro">
+              <img src="images/events_section_title.png" class="title" />
             <p>Planning for the wedding events is under way.  Stay tuned for updates. </p>
           </div>
         </div>
       </section>
       <!-- END EVENTS SECTION -->
 
-    <div>
-
+    </div>
 
     <!-- build:js scripts/scripts.js -->
     <script src="components/jquery/jquery.min.js"></script>
@@ -204,6 +210,9 @@
     <script src="scripts/scripts.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/DeviceDetector.js"></script>
+    <script src="scripts/directives/parallax.js"></script>
+    <script src="scripts/services/CubeServer.js"></script>
     <!-- endbuild -->
 
   </body>
