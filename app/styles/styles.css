@@ -75,7 +75,7 @@ time{color:#00ebff;}
 /* Intro Styles */
    
 #intro{text-align: center;}  
-#intro p.lead {color: white; margin-top: 0.2em;padding: 5px 5px 5px 5px; background: rgba(0,0,0,0.6);}
+#intro p.lead {color: white; margin-top: 0.2em;padding: 5px 5px 5px 5px; background: rgba(0,0,0,0.6);opacity:0}
 #intro img{margin-top: 0.5em;margin-bottom: 0;opacity:0;padding: 10px 10px 10px 10px;background: rgba(255,255,255,0.8);}
 
 

@@ -23,11 +23,9 @@ jQuery(document).ready(function() {
 
   jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
     jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
-      if(jQuery(window).width()<767){
+      jQuery('#date_intro').animate({opacity: '1'}, 500, function() {
         jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000);
-      } else {
-        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000);
-      }
+      });
     });
   });
 
