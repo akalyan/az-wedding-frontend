@@ -77,15 +77,15 @@ jQuery(document).ready(function() {
   jQuery(window).resize(function() {
     textCenter();
     if(jQuery(window).width()>992){     
-      /* if (jQuery('#top-navigation ul').is(':hidden') ) { */
+      if (jQuery('#top-navigation ul').is(':hidden') ) {
         jQuery('#top-navigation ul').show();
         jQuery('#menu-mobile').removeClass('active');           
-      /* } */
+      }
     } else {
-      /* if (jQuery('#top-navigation ul').is(':visible') ) { */
+      if (jQuery('#top-navigation ul').is(':visible') ) {
         jQuery('#top-navigation ul').hide();
         jQuery('#menu-mobile').removeClass('active');           
-      /* } */
+      }
     }
   });
   
