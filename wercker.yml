@@ -66,4 +66,4 @@ deploy:
     - script:
         name: Deploy to Opsworks
         code: |
-          $WERCKER_SOURCE_DIR/bin/aws --region='us-east-1' opsworks create-deployment --stack-id='$OPSWORKS_STACK_ID' --app-id='$OPSWORKS_APP_ID' --command='{"Name": "deploy"}'
+          $WERCKER_SOURCE_DIR/bin/aws --region='us-east-1' opsworks create-deployment --stack-id=$OPSWORKS_STACK_ID --app-id=$OPSWORKS_APP_ID --command='{"Name": "deploy"}'
