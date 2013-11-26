@@ -34,7 +34,7 @@ deploy:
     - script:
         name: Install AWS CLI
         code: |
-          wget --quiet wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
+          wget wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
           unzip -qq awscli-bundle.zip
           ./awscli-bundle/install -b $WERCKER_SOURCE_DIR/bin/aws
 
