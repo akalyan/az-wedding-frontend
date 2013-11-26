@@ -27,6 +27,27 @@ build:
 
 deploy:
   steps:
+
+    - install-packages:
+        packages: unzip
+
+    - script:
+        name: Install AWS CLI
+        code: |-
+          wget --quiet wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
+          unzip -qq awscli-bundle.zip
+	  ./awscli-bundle/install -b $WERCKER_SOURCE_DIR/bin/aws
+
+    - script:
+        name: AWS there?
+        code: $WERCKER_SOURCE_DIR/bin/aws --version
+
+    - script:
+        name: Set up the credential environment variables
+        code: |-
+          export AWS_ACCESS_KEY_ID=$AWS_KEY
+          export AWS_SECRET_ACCESS_KEY=$AWS_SECRET
+
     - grunt:
         tasks: archive
 
@@ -41,3 +62,8 @@ deploy:
         key_secret: $AWS_SECRET
         bucket_url: $S3_BUCKET_URL
         source_dir: arch/
+
+    - script:
+        name: Deploy to Opsworks
+        code: |
+          $WERCKER_SOURCE_DIR/bin/aws --region='us-east-1' opsworks create-deployment --stack-id='$OPSWORKS_STACK_ID' --app-id='$OPSWORKS_APP_ID' --command='{"Name": "deploy"}

@@ -73,8 +73,8 @@ time{color:#00ebff;}
 #logo img{width:100px;}
    
 /* Intro Styles */
-   
-#intro{text-align: center;}  
+
+#intro{text-align: center;}
 #intro p.lead {color: white; margin-top: 0.2em;padding: 5px 5px 5px 5px; background: rgba(0,0,0,0.6);opacity:0}
 #intro img{margin-top: 0.5em;margin-bottom: 0;opacity:0;padding: 10px 10px 10px 10px;background: rgba(255,255,255,0.8);}
 
@@ -240,6 +240,18 @@ section#pictures{padding-bottom: 0;overflow:hidden;}
   padding: 15px 0 0;
   font-size: 1em;
 }
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+
+.parallax_pic {text-align: center;}
+.parallax_pic p.lead {color: white; margin-top: 0.2em;padding: 5px 5px 5px 5px; background: rgba(0,0,0,0.6);}
+
+#footer_pic {position: relative; overflow: hidden; background: url('../images/beach_hands.jpg') no-repeat 50% 50%; height: 300px;}
+.no-touch #footer_pic {-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-attachment: fixed;}
+
+#footer {background-color: #d3d3d3; text-align: right;}
 
 /* Styles for Specific for bigger devices */
 @media (min-width: 992px) {
