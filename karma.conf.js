@@ -47,7 +47,7 @@ autoWatch = false;
 // - IE (only Windows)
 browsers = ['PhantomJS'];
 hostname = process.env.IP || 'localhost';
-port = 9000; // process.env.PORT || 8080;
+port = 9010; // process.env.PORT || 8080;
 runnerPort = 0; // used to be 9100;
 
 // If browser does not capture in given timeout [ms], kill it
