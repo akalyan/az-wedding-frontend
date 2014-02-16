@@ -10,7 +10,6 @@ module.exports = function(config) {
       'app/components/angular/angular.js',
       'app/components/angular-mocks/angular-mocks.js',
       'app/components/jquery/jquery.min.js',
-      'app/components/jquery.easing/js/jquery.easing.min.js',
       'app/components/modernizr/modernizr.js',
       'app/components/swiper/dist/idangerous.swiper-2.2.min.js',
       'app/scripts/*.js',

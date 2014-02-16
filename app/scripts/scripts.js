@@ -101,7 +101,7 @@ jQuery(document).ready(function() {
   
     jQuery('html, body').stop().animate({
       scrollTop: jQuery(anchor.attr('href')).offset().top-44
-    }, 1500,'easeInOutExpo');
+    }, 1500,'swing');
     
     /* If Mobile hide menu on select */
     if(jQuery('#menu-mobile').hasClass('active')) {
@@ -117,7 +117,7 @@ jQuery(document).ready(function() {
   
     jQuery('html, body').stop().animate({
       scrollTop: jQuery(anchor.attr('href')).offset().top-50
-    }, 1500,'easeInOutExpo');
+    }, 1500,'swing');
     
     /* If Mobile hide menu on select */
     if(jQuery('#menu-mobile').hasClass('active')) {
