@@ -9,7 +9,7 @@ module.exports = function(config) {
     files: [
       'app/components/angular/angular.js',
       'app/components/angular-mocks/angular-mocks.js',
-      'app/components/jquery/jquery.min.js',
+      'app/components/jquery/dist/jquery.min.js',
       'app/components/modernizr/modernizr.js',
       'app/components/swiper/dist/idangerous.swiper-2.2.min.js',
       'app/scripts/*.js',
@@ -41,7 +41,7 @@ module.exports = function(config) {
     // web server port
     // CLI --port 9876
     hostname: process.env.IP || 'localhost',
-    port: process.env.PORT || 9876,
+    port: 9876, // process.env.PORT || 9876,
 
     // enable / disable colors in the output (reporters and logs)
     // CLI --colors --no-colors
