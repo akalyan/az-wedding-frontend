@@ -1,58 +1,88 @@
-// Karma configuration
+module.exports = function(config) {
+  config.set({
+    // base path, that will be used to resolve files and exclude
+    basePath: '',
 
-// base path, that will be used to resolve files and exclude
-basePath = '';
+    frameworks: ['jasmine'],
 
-// list of files / patterns to load in the browser
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-  'app/components/angular/angular.js',
-  'app/components/angular-mocks/angular-mocks.js',
-  'app/components/jquery/jquery.min.js',
-  'app/components/jQuery-Parallax/scripts/*',
-  'app/components/jquery.easing/js/jquery.easing.min.js',
-  'app/components/modernizr/modernizr.js',
-  'app/components/swiper/dist/idangerous.swiper-2.2.min.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-];
+    // list of files / patterns to load in the browser
+    files: [
+      'app/components/angular/angular.js',
+      'app/components/angular-mocks/angular-mocks.js',
+      'app/components/jquery/jquery.min.js',
+      'app/components/jquery.easing/js/jquery.easing.min.js',
+      'app/components/modernizr/modernizr.js',
+      'app/components/swiper/dist/idangerous.swiper-2.2.min.js',
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      'test/mock/**/*.js',
+      'test/spec/**/*.js'
+    ],
 
-// list of files to exclude
-exclude = [];
+    // list of files to exclude
+    exclude: [],
 
-// test results reporter to use
-// possible values: dots || progress || growl
-reporters = ['progress'];
+/*
+    preprocessors: {
+      'client/*.js': ['commonjs'],
+      'test/client/*.js': ['commonjs']
+    },
+*/
 
-// enable / disable colors in the output (reporters and logs)
-colors = true;
+    // use dots reporter, as travis terminal does not support escaping sequences
+    // possible values: 'dots', 'progress'
+    // CLI --reporters progress
+    reporters: ['progress'],
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_DEBUG;
+    junitReporter: {
+      // will be resolved to basePath (in the same way as files/exclude patterns)
+      outputFile: 'test-results.xml'
+    },
 
-// enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
+    // web server port
+    // CLI --port 9876
+    hostname: process.env.IP || 'localhost',
+    port: process.env.PORT || 9876,
 
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-browsers = ['PhantomJS'];
-hostname = process.env.IP || 'localhost';
-port = 9010; // process.env.PORT || 8080;
-runnerPort = 0; // used to be 9100;
+    // enable / disable colors in the output (reporters and logs)
+    // CLI --colors --no-colors
+    colors: true,
 
-// If browser does not capture in given timeout [ms], kill it
-captureTimeout = 10000;
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    // CLI --log-level debug
+    logLevel: config.LOG_DEBUG,
 
-// Continuous Integration mode
-// if true, it capture browsers, run tests and exit
-singleRun = false;
+    // enable / disable watching file and executing tests whenever any file changes
+    // CLI --auto-watch --no-auto-watch
+    autoWatch: false,
+
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    // CLI --browsers Chrome,Firefox,Safari
+    browsers: ['PhantomJS'],
+
+    // If browser does not capture in given timeout [ms], kill it
+    // CLI --capture-timeout 5000
+    captureTimeout: 10000,
+
+    // Auto run tests on start (when browsers are captured) and exit
+    // CLI --single-run --no-single-run
+    singleRun: false,
+
+    // report which specs are slower than 500ms
+    // CLI --report-slower-than 500
+    reportSlowerThan: 500,
+
+    plugins: [
+      'karma-jasmine',
+      'karma-phantomjs-launcher'
+    ]
+  });
+};
