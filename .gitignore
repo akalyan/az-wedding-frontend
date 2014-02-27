@@ -5,6 +5,7 @@ dist
 .sass-cache
 app/components/
 archive.tar
+archive.zip
 .DS_Store
 .picasa*
 npm-debug.log

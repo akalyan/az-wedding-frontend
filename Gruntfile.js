@@ -264,6 +264,51 @@ module.exports = function (grunt) {
           { src: ['<%= yeoman.dist %>/**/*'], dest: '<%= yeoman.arch %>/' }
         ]
       }
+    },
+    'string-replace': {
+      undo: {
+        files: {
+          'dist/': ['dist/*.html']
+        },
+        options: {
+          replacements: [
+            {
+              pattern: 'vo7773bwq2',
+              replacement: '$SEGMENT_IO_ID'
+            },
+            {
+              pattern: 'cvod71p0ul',
+              replacement: '$SEGMENT_IO_ID'
+            }
+          ]
+        }
+      },
+      beta: {
+        files: {
+          'dist/': ['dist/*.html']
+        },
+        options: {
+          replacements: [
+            {
+              pattern: '$SEGMENT_IO_ID',
+              replacement: 'vo7773bwq2'
+            }
+          ]
+        }
+      },
+      production: {
+        files: {
+          'dist/': ['dist/*.html']
+        },
+        options: {
+          replacements: [
+            {
+              pattern: '$SEGMENT_IO_ID',
+              replacement: 'cvod71p0ul'
+            }
+          ]
+        }
+      }
     }
   });
 
@@ -304,7 +349,8 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('archive', ['compress:arch']);
+  grunt.registerTask('archive-beta', ['string-replace:beta', 'compress:arch', 'string-replace:undo']);
+  grunt.registerTask('archive-production', ['string-replace:production', 'compress:arch', 'string-replace:undo']);
 
   grunt.registerTask('default', ['build']);
 };
