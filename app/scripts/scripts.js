@@ -13,13 +13,14 @@ function textCenter() {
   });
 
   jQuery('.text-container').css({
-    left: (jQuery(window).width() - jQuery('.text-container').outerWidth())/2,
+    left: (jQuery(window).width()/2 - jQuery('.text-container').outerWidth()/2),
     top: jQuery(window).height() - jQuery(window).height()/4 - jQuery('.text-container').outerHeight()/2
   });
 }
-textCenter();
 
 jQuery(document).ready(function() {
+
+  textCenter();
 
   jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
     jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
@@ -33,11 +34,11 @@ jQuery(document).ready(function() {
   /*      Navigation
   /*-----------------------------------------------------------------------------------*/
   
-  var animate='down';
+  // var animate='down';
   
   jQuery(window).bind('scroll', function () {
   
-    /* Animation for Top Navigation */
+    /* Animation for Top Navigation 
     var scrollTop = jQuery(window).scrollTop();
     
     if (scrollTop > jQuery('#aboutus').offset().top-60 && animate === 'down') {
@@ -59,6 +60,7 @@ jQuery(document).ready(function() {
         });
       }
     });
+    */
 
   });
   
