@@ -18,9 +18,8 @@ function textCenter() {
   });
 }
 
-jQuery(document).ready(function() {
-
-  textCenter();
+jQuery(window).load(function() {
+  textCenter(); 
 
   jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
     jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
@@ -30,6 +29,10 @@ jQuery(document).ready(function() {
     });
   });
 
+});
+
+jQuery(document).ready(function() {
+
   /*-----------------------------------------------------------------------------------*/
   /*      Navigation
   /*-----------------------------------------------------------------------------------*/
@@ -38,8 +41,9 @@ jQuery(document).ready(function() {
   
   jQuery(window).bind('scroll', function () {
   
-    /* Animation for Top Navigation 
     var scrollTop = jQuery(window).scrollTop();
+    
+    /* Animation for Top Navigation 
     
     if (scrollTop > jQuery('#aboutus').offset().top-60 && animate === 'down') {
       animate='up';
@@ -48,7 +52,8 @@ jQuery(document).ready(function() {
       animate='down';
       jQuery('#top-bar').stop().animate({top:'-75px'}, 300);
     }
-    
+    */
+
     jQuery('section').each(function(){
       if (scrollTop > jQuery(this).offset().top-60){
         var section = jQuery(this).attr('id');
@@ -60,8 +65,7 @@ jQuery(document).ready(function() {
         });
       }
     });
-    */
-
+    
   });
   
   /* Responsive Menu Click */

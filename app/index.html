@@ -34,23 +34,20 @@
     <![endif]-->
 
     <!-- START PAGE -->
-    <div id="page" ng-app="azWeddingFrontendApp">
-
-      <!-- Add your site or application content here -->
-      <div ng-view></div>
+    <div id="page">
 
       <!-- START HEADER -->
       <section id="header" class="bg1">
-        <div class="row">
-          <div class="col-xs-12">
+        <!-- div class="row" //-->
+          <!-- div class="col-xs-12" //-->
             <div id="intro" class="text-container">
               <img src="images/zyanya_cover.png" id="zyanya_intro" />
               <img src="images/atish_cover.png" id="atish_intro" />
               <p class="lead" id="date_intro">September 1, 2014</p>
               <div id="explore"><a class="scroll" href="#aboutus"><i class="icon-angle-down icon-4x"></i></a></div>
             </div>
-          </div>
-        </div>
+          <!-- /div //-->
+        <!-- /div //-->
       </section>
       <!-- END HEADER -->
 
@@ -70,6 +67,8 @@
                   <li><a href="#aboutus">about us</a></li>
                   <li><a href="#pictures">pictures</a></li>
                   <li><a href="events.html">events</a></li>
+                  <li><a href="seattle.html">seattle</a></li>
+                  <li><a href="faq.html">faq</a></li>
                 </ul>
               </nav>
             </div>
@@ -79,6 +78,7 @@
       <!-- END TOP-BAR -->    
 
       <!-- START ABOUT US SECTION -->
+      <a name="aboutus"></a>
       <section id="aboutus">
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 intro">
@@ -176,6 +176,7 @@
       <!-- END ABOUT US  SECTION -->
 
       <!-- START PICTURES SECTION -->
+      <a name="pictures"></a>
       <section id="pictures">
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 intro">
@@ -226,20 +227,12 @@
 
     </div>
 
-    <!-- build:js scripts/scripts.js -->
+    <!-- build:js scripts/index.js -->
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="components/modernizr/modernizr.js"></script>
     <script src="components/swiper/dist/idangerous.swiper-2.2.min.js"></script>
-    <script src="components/angular/angular.js"></script>
-    <script src="components/angular-resource/angular-resource.js"></script>
-    <script src="components/angular-cookies/angular-cookies.js"></script>
-    <script src="components/angular-sanitize/angular-sanitize.js"></script>
 
     <script src="scripts/scripts.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/services/DeviceDetector.js"></script>
-    <script src="scripts/services/CubeServer.js"></script>
     <!-- endbuild -->
 
   </body>
