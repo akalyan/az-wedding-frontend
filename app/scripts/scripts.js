@@ -24,7 +24,9 @@ jQuery(window).load(function() {
   jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
     jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
       jQuery('#date_intro').animate({opacity: '1'}, 500, function() {
-        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000);
+        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000, function() {
+          jQuery('#rsvp_intro').animate({opacity: '1'}, 1000);
+        });
       });
     });
   });
