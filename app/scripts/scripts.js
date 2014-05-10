@@ -24,8 +24,8 @@ jQuery(window).load(function() {
   jQuery('#zyanya_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
     jQuery('#atish_intro').animate({opacity: '1', 'padding-top': '10px'}, 500,function() {
       jQuery('#date_intro').animate({opacity: '1'}, 500, function() {
-        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 1000, function() {
-          jQuery('#rsvp_intro').animate({opacity: '1'}, 1000);
+        jQuery('#explore').animate({opacity: '1', 'margin-top': '0em'}, 20, function() {
+          jQuery('#rsvp_intro').animate({opacity: '1'}, 500);
         });
       });
     });
@@ -149,11 +149,11 @@ jQuery(document).ready(function() {
     pagination: '.pagination'
   });
 
-  $('.arrow-left').on('click', function(e){
+  jQuery('.arrow-left').on('click', function(e){
     e.preventDefault();
     mySwiper.swipePrev();
   });
-  $('.arrow-right').on('click', function(e){
+  jQuery('.arrow-right').on('click', function(e){
     e.preventDefault();
     mySwiper.swipeNext();
   });
@@ -168,6 +168,21 @@ jQuery(document).ready(function() {
   jQuery(window).resize(function() {
     jQuery('#swiper').height(jQuery('.swiper-slide img').height());
     jQuery('.swiper-wrapper').height(jQuery('.swiper-slide').height());
+    
+    jQuery('#vid-wrapper').width(jQuery('.swiper-slide img').width());
+    jQuery('#vid-wrapper').height(jQuery('.swiper-slide img').height());
+      
+    jQuery('#vid').width(jQuery('.swiper-slide img').width());
+    jQuery('#vid').height(jQuery('.swiper-slide img').height());
+  });
+  
+  /* On Load swiper-vid height should adjust to img size */
+  jQuery('#vid').load(function() {
+    jQuery('#vid-wrapper').width(jQuery('.swiper-slide img').width());
+    jQuery('#vid-wrapper').height(jQuery('.swiper-slide img').height());
+      
+    jQuery('#vid').width(jQuery('.swiper-slide img').width());
+    jQuery('#vid').height(jQuery('.swiper-slide img').height());
   });
         
 });
