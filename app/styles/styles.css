@@ -22,7 +22,12 @@ time{color:#00ebff;}
 .text-right{text-align: right;}
 .intro{margin-bottom: 3.125em;text-align: center;}
 .fixed{position:fixed;top:-60px;}
-.smooth,.smooth img{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.smooth,.smooth img {
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+}
 
 .center-list ul{position: relative;left: 50%;display: block;float: left;overflow:visible;}
 .center-list ul li {position: relative;right: 50%;float: left;}
@@ -61,8 +66,17 @@ time{color:#00ebff;}
    Header Styles
    ========================================================================== */
 
-#header{position: relative; overflow:hidden; background: url('../images/background_hands.jpg') no-repeat 50% 0; height:100%;}
-.no-touch #header{-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-attachment: fixed;}
+#header {
+    position: relative; 
+    overflow:hidden; 
+    background: url('../images/background_hands.jpg') no-repeat 50% 0; 
+    height:100%;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+/* .no-touch #header{-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-attachment: fixed;} */
 
 .bg1, .bg2, .bg3, .bg4, .bg5 {
       padding: 0;
@@ -86,7 +100,10 @@ time{color:#00ebff;}
 #explore {opacity:0;margin-top: 0em;}
 #explore a {text-decoration: none;}
 #explore a i{font-size:6em;margin:0 auto; color:white; cursor:pointer; color:white;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
-.touch #explore a i:hover,.no-touch #explore a i:hover{color:#00ebff;}
+.touch #explore a i:hover,
+.no-touch #explore a i:hover {
+    color:#00ebff; 
+}
 
 /* ==========================================================================
    Navigation Styles
@@ -253,8 +270,7 @@ section#pictures{padding-bottom: 0;overflow:hidden;}
 .parallax_pic {text-align: center;}
 .parallax_pic p.lead {color: white; margin-top: 0.2em;padding: 5px 5px 5px 5px; background: rgba(0,0,0,0.6);}
 
-#footer_pic {position: relative; overflow: hidden; background: url('../images/beach_hands.jpg') no-repeat 50% 50%; height: 300px;}
-.no-touch #footer_pic {-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-attachment: fixed;}
+/* .no-touch #footer_pic {-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-attachment: fixed;} */
 
 #footer {background-color: #d3d3d3; text-align: right;}
 
