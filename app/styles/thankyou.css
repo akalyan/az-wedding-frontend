@@ -1,0 +1,10 @@
+#footer_pic { 
+    position: relative; 
+    overflow: hidden; 
+    background: url('../images/footer_1.jpg') no-repeat 50% 50%; 
+    height: 300px;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
